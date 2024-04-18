@@ -1,0 +1,13 @@
+logging:
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(traceId=%X{traceId:-NONE}) %clr(spanId=%X{spanId:-NONE}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+  level:
+    root:
+      INFO
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus
+  server:
+    port: 8081
